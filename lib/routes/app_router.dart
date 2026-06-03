@@ -31,6 +31,6 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       ),
     ],
     initialLocation: Routes.splash,
-    errorBuilder: (context, state) => Scaffold(body: Center(child: Text('Page not found: ${state.location}'))),
+    errorBuilder: (context, state) => Scaffold(body: Center(child: Text('Page not found: ${state.uri.path}'))),
   );
 });
